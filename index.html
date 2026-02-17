@@ -13,27 +13,25 @@
     <body>
         <h1>Caesar Cipher Tool</h1>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
-        <button id="submit-btn" type="button">Get Value</button>
-        <!--<p>Inputted text: <span id="output"></span></p>-->
+        <div>
+            <h3>Explanation of the cipher</h3>
+            <h3>Click the encode button to convert text into its caesar cipher version (maybe re-word).</h3>
+            <h3>Also enter the number of times a letter should be shifted, must be a positive number.</h3>
+            <h3>Click the decode button to convert text into its normal version (maybe re-word).</h3>
+            <br>
+        </div>
 
-        <!--
-        <form id = "s">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <input type="submit" value="Submit">
-        </form>
-        <p>Inputted text: <span id="output"></span></p>
-        -->
-        <script src = "index.js"></script>
+        <div>
+            <div onclick = "encode()">Encode</div>
+            <div onclick = "decode()">Decode</div>
+        </div>
+
+        <!--last left off starting the buttons-->
         
-        <!--
-        <form action="/action_page.php">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <input type="submit" value="Submit">
-        </form>
-        -->
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"/>
+        <button id="submit-btn" type="button">Get Value</button>
+        <script src = "index.js"></script>
     </body>
 </html>
