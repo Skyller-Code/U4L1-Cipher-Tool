@@ -27,17 +27,26 @@
             <div onclick = "decode('bcdef', 1)">Decode</div>
             -->
 
-            <div onclick = "encode('xyz', 1)">Encode</div>
-            <div onclick = "decode('abc', 1)">Decode</div>
+            <div onclick = "encode(1)">Encode</div>
+            <div onclick = "decode('abc', 2)">Decode</div>
 
         </div>
         <br>
 
-        
+        <label for="input">Input Text:</label>
+        <input type="text" id = "input" name = "input">
+        <button id = "sub-but" type = "button">Enter Text</button>
+        <br>
+        <label for="key">Input Key:</label>
+        <input type="number" id = "key" name = "key">
+        <button id = "key-but" type = "button">Enter Key</button>
+        <script src = "index.js"></script>
 
+        <!--
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"/>
         <button id="submit-btn" type="button">Get Value</button>
         <script src = "index.js"></script>
+        -->
     </body>
 </html>
