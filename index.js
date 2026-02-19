@@ -33,7 +33,7 @@ function encode()
     //console.log(input.value);
 
     //const text = getText();
-    const text = document.getElementById("input").value;
+    const text = document.getElementById("input").value.toLowerCase();
     console.log(text);
 
     const key = Number(document.getElementById("key").value);
@@ -52,10 +52,21 @@ function encode()
         alphabet = "abcdefghijklmnopqrstuvwxyz";
         for(let index = 0; index < text.length; index++)
         {
-            console.log((alphabet.search(text.charAt(index)) + key));
-            console.log((alphabet.search(text.charAt(index)) + key) % 26);
-            //the % shifts the letter back to the beginning if it goes over 26
-            encoded_text += alphabet[(alphabet.search(text.charAt(index)) + key) % 26];
+            if(alphabet.includes(text.charAt(index)))
+            {
+                console.log((alphabet.search(text.charAt(index)) + key));
+                console.log((alphabet.search(text.charAt(index)) + key) % 26);
+                //the % shifts the letter back to the beginning if it goes over 26
+                console.log(alphabet[(alphabet.search(text.charAt(index)) + key) % 26])
+                console.log(alphabet[(alphabet.search(text.charAt(index)) + key) % 26].toLowerCase())
+                encoded_text += alphabet[(alphabet.search(text.charAt(index)) + key) % 26].toLowerCase();
+            }
+            else
+            {
+                console.log(text.charAt(index))
+                encoded_text += text.charAt(index)
+            }
+            
         }
         console.log(encoded_text);
 
@@ -66,25 +77,40 @@ function encode()
     }
 }
 
-function decode(text, key)
+function decode()
 {
-    console.log(text);
+    const text = document.getElementById("input").value;
+    const key = Number(document.getElementById("key").value);
 
-    encoded_text = "";
-    alphabet = "abcdefghijklmnopqrstuvwxyz";
-    for(let index = 0; index < text.length; index++)
+    if(text == "" || (key == "" || key < 1))
     {
-        console.log((alphabet.search(text.charAt(index)) - key))
-        if((alphabet.search(text.charAt(index)) - key) >= 0)
-        {
-            encoded_text += alphabet[(alphabet.search(text.charAt(index)) - key) % 26];
-        }
-        else
-        {
-            encoded_text += alphabet[(alphabet.search(text.charAt(index)) - key) + 26];
-        }
-
-        console.log(encoded_text);
+        console.log("nothing");
     }
-    console.log(encoded_text);
+    else
+    {
+        encoded_text = "";
+        alphabet = "abcdefghijklmnopqrstuvwxyz";
+        for(let index = 0; index < text.length; index++)
+        {
+            console.log((alphabet.search(text.charAt(index)) - key))
+            if((alphabet.search(text.charAt(index)) - key) >= 0)
+            {
+                encoded_text += alphabet[(alphabet.search(text.charAt(index)) - key) % 26];
+            }
+            else
+            {
+                encoded_text += alphabet[(alphabet.search(text.charAt(index)) - key) + 26];
+            }
+
+            console.log(encoded_text);
+        }
+        console.log(encoded_text);
+
+        const output = document.createElement("h1");
+        output.textContent = `Output: ${encoded_text}`;
+        const body = document.getElementsByTagName("body")[0];
+        body.appendChild(output);
+    }
+
+    
 }

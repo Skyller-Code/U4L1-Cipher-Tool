@@ -13,42 +13,27 @@
     <body>
         <h1>Caesar Cipher Tool</h1>
 
-        <div>
-            <h3>Explanation of the cipher</h3>
-            <h3>Click the encode button to convert text into its caesar cipher version (maybe re-word).</h3>
-            <h3>Also enter the number of times a letter should be shifted, must be a positive number.</h3>
-            <h3>Click the decode button to convert text into its normal version (maybe re-word).</h3>
+        <div id = "dir">
+            <h3>The Caesar Cipher shifts the position of letters based on certain amount of times.</h3>
+            <h3>First enter the text you wish to encode or decode.</h3>
+            <h3>Then enter the times of times you wish to shift the positions.</h3>
+            <h3>The number must be over 0. Nothing will happen if its 0 or below.</h3>
+            <h3>Lastly press the "Encode" or "Decode" button to change the text.</h3>
             <br>
         </div>
 
-        <div id = "buttons">
-            <!--
-            <div onclick = "encode('abcde', 2)">Encode</div>
-            <div onclick = "decode('bcdef', 1)">Decode</div>
-            -->
-
-            <div onclick = "encode()">Encode</div>
-            <div onclick = "decode('abc', 2)">Decode</div>
-
-        </div>
         <br>
 
         <label for="input">Input Text:</label>
         <input type="text" id = "input" name = "input" min = "0">
-        <button id = "sub-but" type = "button">Enter Text</button>
         <br>
         <label for="key">Input Key:</label>
         <input type="number" id = "key" name = "key">
-        <button id = "key-but" type = "button">Enter Key</button>
-        <script src = "index.js"></script>
 
-        <!--<div id = "sub" onclick = "process()">Submit</div>-->
+        <h1 onclick = "encode()" id = "en-but">Encode</h1>
+        <h1 onclick = "decode()" id = "de-but">Decode</h1>
 
-        <!--
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"/>
-        <button id="submit-btn" type="button">Get Value</button>
+
         <script src = "index.js"></script>
-        -->
     </body>
 </html>
