@@ -27,14 +27,19 @@ function getKey()
 
 //might need to validate first
 
-function encode(key)
+function encode()
 {
+    console.log(Number("A"))
     //console.log(input.value);
 
-    text = getText();
+    //const text = getText();
+    const text = document.getElementById("input").value;
     console.log(text);
 
-    if(text == "")
+    const key = Number(document.getElementById("key").value);
+    console.log(key);
+
+    if(text == "" || (key == "" || key < 1))
     {
         console.log("nothing");
     }
@@ -53,6 +58,11 @@ function encode(key)
             encoded_text += alphabet[(alphabet.search(text.charAt(index)) + key) % 26];
         }
         console.log(encoded_text);
+
+        const output = document.createElement("h1");
+        output.textContent = `Output: ${encoded_text}`;
+        const body = document.getElementsByTagName("body")[0];
+        body.appendChild(output);
     }
 }
 

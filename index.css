@@ -3,3 +3,8 @@
 {
     display: flex;
 }
+
+#sub
+{
+    border: solid;
+}
