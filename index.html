@@ -7,23 +7,18 @@
     <head>
         <title>Unit 4 Lab 1</title>
         <link rel = "stylesheet" href = "index.css">
-        <!--<script src = "index.js"></script>-->
     </head>
 
     <body>
         <h1>Caesar Cipher Tool</h1>
-
         <div id = "dir">
             <h3>The Caesar Cipher shifts the position of letters based on certain amount of times.</h3>
             <h3>First enter the text you wish to encode or decode.</h3>
             <h3>Then enter the times of times you wish to shift the positions.</h3>
             <h3>The number must be over 0. Nothing will happen if its 0 or below.</h3>
             <h3>Lastly press the "Encode" or "Decode" button to change the text.</h3>
-            <br>
         </div>
-
         <br>
-
         <label for="input">Input Text:</label>
         <input type="text" id = "input" name = "input" min = "0">
         <br>
@@ -32,7 +27,6 @@
 
         <h1 onclick = "encode()" id = "en-but">Encode</h1>
         <h1 onclick = "decode()" id = "de-but">Decode</h1>
-
 
         <script src = "index.js"></script>
     </body>

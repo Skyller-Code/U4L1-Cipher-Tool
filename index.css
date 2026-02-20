@@ -1,37 +1,47 @@
 body
 {
     text-align: center;
+    background-color: rgb(247, 251, 255);
 }
 
 #dir
 {
     border: solid;
+    border-radius: 15px;
+    background-color: rgb(172, 231, 219);
     text-align: center;
-}
-
-#buttons
-{
-    display: flex;
-    border: solid;
+    margin-left: 25vw;
+    padding: 2px;
+    width: 800px;
+    color: rgb(3, 25, 58);
 }
 
 #en-but
 {
     border: solid;
+    background-color: rgb(211, 125, 54);
+    margin-left: 47vw;
     text-align: center;
     border-radius: 50px;
     width: 150px;
+}
+
+#en-but:hover
+{
+    color: rgb(210, 223, 39);
 }
 
 #de-but
 {
     border: solid;
+    background-color: rgb(182, 46, 171);
+    margin-left: 47vw;
     text-align: center;
     border-radius: 50px;
     width: 150px;
 }
 
-#sub
+#de-but:hover
 {
-    border: solid;
+    color: rgb(49, 184, 31);
 }
